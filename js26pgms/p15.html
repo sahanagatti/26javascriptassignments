@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Program for GCD or GCF of two nors using euclids thearom</h1>
+    </center>
+    <hr>
+
+    <script>
+        function myFunction(a, b) { 
+            let smaller = Math.min(a, b); 
+            let hcf = 1; 
+        
+            for (let i = 1; i <= smaller; i++) { 
+                if (a % i === 0 && b % i === 0) { 
+                    hcf = i; 
+                } 
+            } 
+        
+            return hcf; 
+        } 
+        
+        const num1 = 20; 
+        const num2 = 12; 
+        
+        console.log("GCD of the giving numbers(20,12) is:",  
+        myFunction(num1, num2));
+    </script>
+</body>
+</html>

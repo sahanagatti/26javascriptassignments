@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>patterns - pyramids (half,inverted half,hollow half,full,hollow full,hollo inverted half).</h1>
+    </center>
+    <hr>
+
+    <script>
+        document.write("<h3> half pyramid</h3>");
+        let str = '';
+        //external loop
+        for(i = 0; i <= 5 ; i++) {
+            //printing stars
+            for(j = 1; j <= i; j++) {
+                    str += '*';
+            }
+            str += '\n';
+        }
+        console.log(str)
+//hollow half
+        let n1 = 6;
+        let string1 = "";
+        //external loop
+        for (let i = 1; i <= n1; i++) {
+        // printing star
+        for (let j = 0; j < i; j++) {
+            if(i === n1) {
+            string1 += "*";
+            }
+            else {
+            if (j == 0 || j == i - 1) {
+                string1 += "*";
+            }
+            else {
+                string1 += " ";
+            }
+            }
+        }
+        string1 += "\n";
+        }
+        console.log(string1);
+
+        //full pyramid
+
+        let n = 5;
+        let string = "";
+        // External loop
+        for (let i = 1; i <= n; i++) {
+        // printing spaces
+        for (let j = 1; j <= n - i; j++) {
+            string += " ";
+        }
+        // printing star
+        for (let k = 0; k < 2 * i - 1; k++) {
+            string += "*";
+        }
+        string += "\n";
+        }
+        console.log(string);
+
+        //hollo full
+
+        let n3 = 5;
+        let string3 = "";
+
+        // External loop
+        for (let i = 1; i <= n3; i++) {
+        // printing spaces
+        for (let j = 1; j <= n3 - i; j++) {
+            string3 += " ";
+        }
+        // printing star
+        for (let k = 0; k < 2 * i - 1; k++) {
+            if(i === 1 || i === n3) {
+            string3 += "*";
+            }
+            else {
+            if(k === 0 || k === 2 * i - 2) {
+                string3 += "*";
+            }
+            else {
+                string3 += " ";
+            }
+            }
+        }
+        string3 += "\n";
+        }
+        console.log(string3);
+
+        //inverted half
+
+        let n4 = 5;
+        let string4 = "";
+        //external loop
+        for (let i = 0; i < n4; i++) {
+        // printing star
+            for (let k = 0; k < n4 - i; k++) {
+                string4 += "*";
+            }
+            string4 += "\n";
+        }
+        console.log(string4);
+
+        //inverted full
+
+        let n5 = 5;
+        let string5 = "";
+        // External loop
+        for (let i = 0; i < n5; i++) {
+            // printing spaces
+            for (let j = 0; j < i; j++) {
+            string5 += " ";
+        }
+        // printing star
+        for (let k = 0; k < 2 * (n5-i) - 1; k++) {
+            string5 += "*";
+        }
+        string5 += "\n";
+        }
+        console.log(string5);
+
+    </script>
+</body>
+</html>

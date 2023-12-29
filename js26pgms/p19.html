@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Program to reverse a number</h1>
+    </center>
+    <hr>
+
+    <script>
+            function reverseFunction(num, reversed = 0) {
+            if (num === 0) {
+                return reversed;
+            }
+            return reverseFunction(Math.floor(num / 10),
+                reversed * 10 + num % 10);
+        }
+        
+        const num = 987654321;
+        const result = reverseFunction(num);
+        
+        document.write(result);
+    </script>
+</body>
+</html>

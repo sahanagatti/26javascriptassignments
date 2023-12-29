@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>program to check a triangle is valid or not</h1>
+    </center>
+    <hr>
+
+    <script>
+        let a,b,c;
+         a = Number(prompt("enter the angle 1"));
+         b = Number(prompt("enter the angle 2"));
+         c = Number(prompt("enter the angle 3"));
+
+         let sum = a + b + c;
+
+         if(sum == 180){
+                document.write("<h1>the triangle is valid</h1>");
+        } else{
+                document.write("<h1> triangle is not  valid</h1>");
+        }
+    </script>
+</body>
+</html>

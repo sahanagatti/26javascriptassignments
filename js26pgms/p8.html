@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Program to check whether a triangle is equilateral, issoscles, or scalene</h1>
+    </center>
+    <hr>
+
+    <script>
+        let a,b,c;
+         a = Number(prompt("enter the angle 1"));
+         b = Number(prompt("enter the angle 2"));
+         c = Number(prompt("enter the angle 3"));
+
+         let sum = a + b + c;
+
+         if(a!=0 && b!=0 && c!=0){
+            if(sum == 180 && a==b && b==c && a==c){
+                document.write("<h1> the triangle is equilateral triangle</h1>");
+            } else if(sum == 180 && a!=b && b!=c && a!=c) {
+                document.write("<h1>the triangle is scalene triangle");
+            } else if(sum == 180){
+                document.write("<h1>the triangle is issoscles triangle</h1");
+            } else{
+                document.write("<h1> triangle is not  valid</h1>");
+            }
+         } else{
+            document.write("<h1> triangle is not  valid</h1>");
+         }
+    </script>
+</body>
+</html>

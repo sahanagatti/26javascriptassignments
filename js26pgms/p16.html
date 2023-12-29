@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Program for prime factorial of numbers</h1>
+    </center>
+    <hr>
+
+    <script>
+        function recursivePrime(n, d) { 
+            if (n <= 1) return []; 
+            if (n == 2) return [2]; 
+            flag = false; 
+            while (n % d == 0) { 
+                n /= d; 
+                flag = true; 
+            } 
+            if (flag) return [d, ...recursivePrime(n, d + 1)]; 
+            return recursivePrime(n, d + 1); 
+        } 
+        
+        const num = 85; 
+        console.log( 
+            "Prime factors of " + 
+                num + ": " + 
+                recursivePrime(num, 2) 
+    );
+    </script>
+</body>
+</html>

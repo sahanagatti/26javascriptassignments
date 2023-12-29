@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>exponent of nor using recursion</h1>
+    </center>
+    <hr>
+
+    <script>
+        var exponent = function(a, n) {
+            if (n === 0) {
+             return 1;
+        } else {
+            return a * exponent(a, n - 1);
+        }
+        };
+
+        console.log(exponent(4, 2)); 
+    </script>
+</body>
+</html>

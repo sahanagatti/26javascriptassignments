@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Program to find whether a given number is palindrome or not</h1>
+    </center>
+    <hr>
+
+		<label>Enter The Number :</label>
+        <input type="text" name="N" id = "N"/>
+		<hr>
+		<br>
+		<button onclick="palindrome();">CHECK</button>
+
+    <script>
+        function palindrome(){
+            {
+				var rem, temp, final = 0;
+				var number = Number(document.getElementById("N").value);
+
+				temp = number;
+				while(number>0)
+				{
+					rem = number%10;
+					number = parseInt(number/10);
+					final = final*10+rem;
+				}
+				if(final==temp)
+				{
+					document.write("<h2>The inputed number is Palindrome</h2");
+				}
+				else
+				{
+					document.write("<h2>The inputted number is not palindrome</h2>");
+				}
+			}
+        }
+    </script>
+</body>
+</html>
